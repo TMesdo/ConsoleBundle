@@ -45,28 +45,14 @@ Installation
             return $bundles;
         }
 
- 5. Add the stylesheets block to your template file
+ 5. The templates needs these blocks in order to render the content: javascripts, stylesheets and body.
+    The bundle layout extends ::base.html.twig, so you can either implement these three blocks, either override CoreSphereConsoleBundle:Console:layout.html.twig.
 
-        <!-- /app/Resources/views/base.html.twig -->
+ 6. jQuery is already included in CoreSphereConsoleBundle:Console:layout.html.twig, you can remove it if you do it yourself.
 
-        {% block stylesheets %}{% endblock %}
+ 8. Run the assets:install command to install the css and js files
 
- 6. Add the javascripts block to your template file
-
-        <!-- /app/Resources/views/base.html.twig -->
-
-        {% block javascripts %}{% endblock %}
-
- 7. Include jQuery
-
-        <!-- /app/Resources/views/base.html.twig -->
-
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryuery/1.6.1/jquery.min.js"></script>
-
-
- 8. run the assets:install command to install the css and js files
-
-        ./app/console assets:install web
+        ./app/console assets:install --symlink web
 
 Tips
 ----
@@ -82,16 +68,14 @@ Preview
 Dependencies
 ------------
 
- * jQuery
  * Twig
- * AsseticBundle
 
 Compatibility
 -------------
 
 Tested with:
 
- * Chrome
+ * Chrome 16
  * Firefox 4
  * Opera 11
  * Safari 5
