@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('bundles/coresphereconsole/css/console.css') }}" type="text/css" />
 {% endblock %}
 
-{% block content %}
+{% block body %}
     <h1>{{ 'coresphere_console.headline.index'|trans }}</h1>
     <div id="coresphere_consolebundle_console" class="console">
         <div class="console_info_bar">
@@ -28,6 +28,7 @@
 
 {% block javascripts %}
 {{ parent() }}
+
 <script src="{{ asset('bundles/coresphereconsole/js/console.js') }}"></script>
 <script>
     jQuery(function () {
