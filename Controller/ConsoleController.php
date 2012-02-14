@@ -68,10 +68,10 @@ class ConsoleController extends Controller
 
         // Some commands (i.e. doctrine:query:dql) dump things out instead of returning a value
         // Looks like a hack, but no way to do this differently
-		ob_start();
-		$application->run($input, $output);
-		$dumped = ob_get_contents(); // We catch it and concatenate it to the output
-		ob_end_clean();
+        ob_start();
+        $application->run($input, $output);
+        $dumped = ob_get_contents(); // We catch it and concatenate it to the output
+        ob_end_clean();
 
         return $this->render('CoreSphereConsoleBundle:Console:result.' . $_format . '.twig', array(
             'input'       => $command,
@@ -83,7 +83,6 @@ class ConsoleController extends Controller
     protected function getApplication($input = NULL)
     {
         $kernel = $this->getKernel($input);
-
 
         return new Application($kernel);
     }
