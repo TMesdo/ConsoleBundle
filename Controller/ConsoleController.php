@@ -63,12 +63,9 @@ class ConsoleController extends Controller
         $formatter->setStyle('question', new HtmlOutputFormatterStyle('black', 'cyan'));
         $output->setFormatter(new HtmlOutputFormatterDecorator($formatter));
 
-        $env = $this;
-        $debug = true;
-
         $application = $this->getApplication($input);
         $application->setAutoExit(FALSE);
-        
+
         // Some commands (i.e. doctrine:query:dql) dump things out instead of returning a value
         // Looks like a hack, but no way to do this differently
 		ob_start();
