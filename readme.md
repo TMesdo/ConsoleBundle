@@ -52,6 +52,7 @@ Installation
 Usage
 -----
 The default route is /console, reach it and enjoy!
+You can also notice a little console button on the right of the toolbar, click and enjoy!
 
 Tips
 ----
@@ -83,5 +84,4 @@ Todo
 ----
 
  * Write Javascript tests
- * Add console as "pop up" to web developer toolbar
  * Figure out how to allow interactive mode (possible? extreme hacky?)
