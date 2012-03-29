@@ -35,7 +35,7 @@ class ConsoleController extends Controller
         return $this->render('CoreSphereConsoleBundle:Console:index.html.twig', array(
             'working_dir' => getcwd(),
             'environment' => $kernel->getEnvironment(),
-            'commands' => $application->all(),
+            'commands'    => $application->all(),
         ));
     }
 
