@@ -45,12 +45,7 @@ Installation
             return $bundles;
         }
 
- 5. The templates needs these blocks in order to render the content: javascripts, stylesheets and body.
-    The bundle layout extends `::base.html.twig`, so you can either implement these three blocks, either override `CoreSphereConsoleBundle:Console:layout.html.twig`.
-
- 6. jQuery is already included in `CoreSphereConsoleBundle:Console:layout.html.twig`, you can remove it if you do it yourself.
-
- 8. Run the assets:install command to install the css and js files
+ 5. Run the assets:install command to install the css and js files (check if you can make use of --symlink option first)
 
         ./app/console assets:install --symlink web
 
